@@ -38,10 +38,14 @@ int main(int argc, char* argv[])
       continue;
     }
 
-    if(!navdata->tags_xc.empty() && !navdata->tags_yc.empty()) {
+    /*if(!navdata->tags_xc.empty() && !navdata->tags_yc.empty()) {
       cout << "X: " << navdata->tags_xc.front() << " Y: " << navdata->tags_yc.front() << endl;
       File << "X: " << navdata->tags_xc.front() << " Y: " << navdata->tags_yc.front() << endl;
-    }
+    }*/
+
+    cout << "X: " << navdata->ax << " Y: " << navdata->ay << endl;
+    File << "X: " << navdata->ax << " Y: " << navdata->ay << endl;
+
     ros::spinOnce();
     loop_rate.sleep();
   }
